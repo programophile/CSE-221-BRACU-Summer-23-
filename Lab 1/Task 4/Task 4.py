@@ -14,8 +14,11 @@ def train_sort(n):
                     if arr[min_idx].split()[-1].split(":")[1]<arr[j].split()[-1].split(":")[1]:
                         min_idx = j
         arr[i],arr[min_idx]=arr[min_idx],arr[i]
-
-    output_file.writelines([f"{line}\n" for line in arr])
+    for i in arr:
+        str1+=f"{i}\n"
+    # str1+=f'{i}\n for i in arr'
+    print(str1)
+    output_file.write(str1)
 
 
 
