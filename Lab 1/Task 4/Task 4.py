@@ -15,7 +15,6 @@ def train_sort(n):
                         min_idx = j
         arr[i],arr[min_idx]=arr[min_idx],arr[i]
 
-    print(arr)
     output_file.writelines([f"{line}\n" for line in arr])
 
 
