@@ -16,8 +16,6 @@ def train_sort(n):
         arr[i],arr[min_idx]=arr[min_idx],arr[i]
     for i in arr:
         str1+=f"{i}\n"
-    # str1+=f'{i}\n for i in arr'
-    print(str1)
     output_file.write(str1)
 
 
