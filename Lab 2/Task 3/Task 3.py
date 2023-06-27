@@ -28,4 +28,13 @@ def mergeSort(arr):
         a1 = mergeSort(arr[:mid])
         a2 = mergeSort(arr[mid:])
         return merge(a1, a2)
-print(mergeSort([2,1,4,5,7,2,9,9,1000,739,5,6,7,2,1,0,3]))
+input_file=open('input3.txt','r')
+output_file=open('output3.txt','w')
+input_file.readline()
+arr=input_file.readline()
+arr=[int(i) for i in arr.split()]
+sorted_arr=mergeSort(arr)
+str1=""
+for i in sorted_arr:
+    str1+=f"{str(i)} "
+output_file.write(str1)
