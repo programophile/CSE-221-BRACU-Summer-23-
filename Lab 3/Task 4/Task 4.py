@@ -10,7 +10,12 @@ def Partition(arr,k):
         return Partition(right_arr, k - len(arr) + len(right_arr))
     else:
         return pvt
-
-arr =[10, 11, 10, 6, 7, 9, 8, 15, 2]
-print(Partition(arr, 5))
-print(arr)
+input_file=open('input4.txt','r')
+output_file=open('output4.txt','w')
+n=input_file.readline()
+arr=[int(i) for i in input_file.readline().split()]
+str1=""
+test_case=int(input_file.readline().split()[0])
+for i in range(test_case):
+    str1+=str(Partition(arr,int(input_file.readline())))+"\n"
+output_file.write(str1)
