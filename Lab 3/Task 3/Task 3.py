@@ -13,6 +13,13 @@ def Quicksort(arr,p,r):
         q=Partition(arr,p,r)
         Quicksort(arr,p,q-1)
         Quicksort(arr,q+1,r)
-arr=[9,5,4,6,1,3,2,9]
-Quicksort(arr,0,len(arr)-1)
-print(arr)
+
+input_file=open('input3.txt','r')
+output_file=open('output3.txt','w')
+n=int(input_file.readline())
+arr=[int(i) for i in input_file.readline().split()]
+output=Quicksort(arr,0,n-1)
+str1=""
+for i in arr:
+    str1+=str(i)+" "
+output_file.write(str1)

@@ -32,4 +32,3 @@ input_file.readline()
 arr=[int(i) for i in input_file.readline().split()]
 output=maximun_possibel(arr)
 output_file.write(str(output[0]+output[1]**2))
-print(output)
