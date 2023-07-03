@@ -26,6 +26,10 @@ def maximun_possibel(arr):
     left_max=maximun_possibel(arr[:mid])
     right_max=maximun_possibel(arr[mid:])
     return find_max(left_max,right_max)
-output=maximun_possibel([5,10,4,-3,1,6,-10,2])
+input_file=open('input2.txt','r')
+output_file=open('output2.txt','w')
+input_file.readline()
+arr=[int(i) for i in input_file.readline().split()]
+output=maximun_possibel(arr)
+output_file.write(str(output[0]+output[1]**2))
 print(output)
-print(output[0]+output[1]**2)

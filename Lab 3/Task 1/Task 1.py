@@ -45,4 +45,4 @@ output_file=open('output1.txt','w')
 input_file.readline()
 arr=[int(i) for i in input_file.readline().split()]
 output=count_allian(arr,0)
-output_file.write(str(output))
+output_file.write(str(output[1]))
