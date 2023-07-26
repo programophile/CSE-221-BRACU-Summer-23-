@@ -3,7 +3,6 @@ with open('input1a.txt') as file:
     str1=""
     for i in range(n):
         a= file.readline().strip()
-        # print(a)
         if int(a)%2==0:
             str1+=f"{a} is an even number\n"
         else:

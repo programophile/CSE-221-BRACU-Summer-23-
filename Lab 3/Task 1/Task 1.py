@@ -7,10 +7,10 @@ def merge(a, b,count):
         if a[temp1]<b[temp2]:
             merged_arr[merged_arr_indx]=a[temp1]
             temp1+=1
-            # count+=1
+
         else:
             merged_arr[merged_arr_indx]=b[temp2]
-            # print(b[temp2])
+
             temp2+=1
             count+=len(a)-temp1
 
