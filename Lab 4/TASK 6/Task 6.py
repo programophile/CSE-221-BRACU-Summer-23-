@@ -26,7 +26,7 @@ r,c=map(int, input_file.readline().split())
 mattrix=""
 for i in range(r):
     mattrix+=input_file.readline()
-print(mattrix)
+# print(mattrix)
 
 a=max_diamond(r,c,mattrix)
 output_file=open('output6_1.txt','w')

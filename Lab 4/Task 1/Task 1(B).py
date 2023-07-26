@@ -14,3 +14,4 @@ for key,value in graph.items():
     str1+="\n"
 output_file=open('output2a_1.txt','w')
 output_file.write(str1)
+output_file.close()

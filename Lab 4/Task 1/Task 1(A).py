@@ -15,3 +15,4 @@ for i in mattrix:
   str1+=" ".join(str(int(x)) for x in i)
   str1+="\n"
 output_file.write(str1)
+output_file.close()
