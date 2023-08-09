@@ -29,7 +29,7 @@ def topological_sort_bfs(graph):
 
 
 
-input_file=open('input1a_1.txt','r')
+input_file=open('input1b_1.txt','r')
 n,m=map(int, input_file.readline().split())
 graph = defaultdict(list)
 str1=""
@@ -47,5 +47,4 @@ else:
     for i in sorted_order:
         str1+=str(i)+" "
 output_file.write(str1)
-print(sorted_order)
 output_file.close()

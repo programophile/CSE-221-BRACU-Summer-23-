@@ -30,7 +30,7 @@ def topological_sort_bfs(graph):
 
 
 
-input_file=open('input2_2.txt','r')
+input_file=open('input2_1.txt','r')
 n,m=map(int, input_file.readline().split())
 graph = defaultdict(list)
 str1=""
@@ -41,12 +41,11 @@ for _ in range(m):
     graph[u].append(v)
 
 sorted_order = topological_sort_bfs(graph)
-output_file=open('output2_2.txt','w')
+output_file=open('output2_1.txt','w')
 if len(sorted_order)!=n:
     str1="Impossible"
 else:
     for i in sorted_order:
         str1+=str(i)+" "
 output_file.write(str1)
-print(sorted_order)
 output_file.close()

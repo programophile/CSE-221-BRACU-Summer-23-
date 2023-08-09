@@ -6,6 +6,9 @@ def topological_sort_dfs(graph):
         for v in graph[u]:
             if v not in visited_node:
                 dfs(v)
+            elif v in visited_node and v not in result:
+                return []
+
         result.append(u)
     visited_node = set()
     result = []
@@ -29,11 +32,11 @@ for _ in range(m):
 
 sorted_order = topological_sort_dfs(graph)
 output_file=open('output1a_1.txt','w')
+
 if len(sorted_order)!=n:
     str1="Impossible"
 else:
     for i in sorted_order:
         str1+=str(i)+" "
 output_file.write(str1)
-print(sorted_order)
 output_file.close()

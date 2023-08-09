@@ -38,14 +38,14 @@ def find_strongly_connected_components(graph):
 input_file = open('input3_1.txt', 'r')
 n, m = map(int, input_file.readline().split())
 graph = defaultdict(list)
-
+for i in range(1,n+1):
+    graph[i]=[]
 for _ in range(m):
     u, v = map(int, input_file.readline().split())
     graph[u].append(v)
 str1=""
 
 strongly_connected_components = find_strongly_connected_components(graph)
-print(strongly_connected_components)
 
 output_file = open('output3_1.txt', 'w')
 
