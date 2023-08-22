@@ -23,7 +23,7 @@ def dijkstra(graph, start):
     return distance_node
 
 
-input_file = open('input3_2.txt', 'r')
+input_file = open('input3_1.txt', 'r')
 n, m = map(int, input_file.readline().split())
 graph = {i: {} for i in range(1, n + 1)}
 
@@ -34,13 +34,13 @@ for _ in range(m):
 distances = dijkstra(graph, start=1)
 destination_distance = distances[n]
 
-# Print the result
+
 if destination_distance == float('inf'):
     result = "Impossible"
 else:
     result = destination_distance
 
-# Write output
-output_file = open('output3_2.txt', 'w')
+
+output_file = open('output3_1.txt', 'w')
 output_file.write(str(result))
 output_file.close()

@@ -1,2 +1,2 @@
-Time:5
-Node:3
+Time 5
+Node 3

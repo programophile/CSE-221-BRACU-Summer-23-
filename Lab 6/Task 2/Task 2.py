@@ -26,8 +26,8 @@ def dijkstra(graph, start):
     return distance_node
 
 
-# Read input
-input_file = open('input2_3.txt', 'r')
+
+input_file = open('input2_1.txt', 'r')
 n, m = map(int, input_file.readline().split())
 graph = {i: {} for i in range(1, n + 1)}
 
@@ -36,7 +36,7 @@ for _ in range(m):
     graph[u][v] = w
 start_a, start_b = map(int, input_file.readline().split())
 
-# Calculate meeting point
+
 distances_a = dijkstra(graph, start_a)
 distances_b = dijkstra(graph, start_b)
 # print(distances_b,distances_a)
@@ -60,7 +60,7 @@ else:
     result = (min_time, meeting_node)
 
 
-output_file = open('output2_3.txt', 'w')
+output_file = open('output2_1.txt', 'w')
 if result == "Impossible":
     output_file.write(result)
 else:
